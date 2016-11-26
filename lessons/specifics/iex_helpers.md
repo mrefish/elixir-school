@@ -181,8 +181,19 @@ Raw representation
 Reference modules
   Module, Atom
 ```
-So now we have a bunch more information about `Map`, including all the way down to where its source is stored and the modules it references!
+
+So now we have a bunch more information about `Map`, including all the way down to where its source is stored and the modules it references.
 This is quite useful when exploring custom and foreign data types and new functions.
+The individual headings can be dense, but at a high level we can gather some relevent information:
+
+- Its an atom data type
+- Where the source code is
+- The version, and compile options
+- A general description
+- How to access it
+- What other modules it references
+
+This is a lot to work with, and much better than going in blind.
 
 ### `r`
 `r` is our helper for recompiling a given module.
@@ -222,7 +233,18 @@ iex> t Map
 @type value() :: any()
 ```
 
-And now we know that Map defines key and value types!
+And now we know that Map defines key and value types in its implementation.
+If we go and look at the source of `Map`:
+
+```elixir
+defmodule Map do
+# ...
+  @type key :: any
+  @type value :: any
+# ...
+```
+
+This is a simple example, stating that keys and values per the implementation can be any type, but it is useful to know.
 
 ## Conclusion
 By leveraging all these built-in niceties, it can become a lot easier to explore and write new code. IEx is very robust, and does a lot to empower developers. With these tools in your toolbox, exploring and building should be even more fun!
