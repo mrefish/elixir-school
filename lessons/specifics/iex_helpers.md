@@ -104,7 +104,7 @@ functions, as they can potentially run forever. For example:
 ```
 
 And now we can even combine this with the autocomplete features of our shell.
-Imagine we were exploring GenServer for the first time:
+Imagine we were exploring Map for the first time:
 
 ```elixir
 iex> h Map
@@ -182,7 +182,7 @@ Reference modules
   Module, Atom
 ```
 So now we have a bunch more information about `Map`, including all the way down to where its source is stored and the modules it references!
-This is quite useful when exploring custom and foreign data types.
+This is quite useful when exploring custom and foreign data types and new functions.
 
 ### `r`
 `r` is our helper for recompiling a given module.
@@ -197,7 +197,7 @@ warning: redefining module MyProject (current version loaded from _build/dev/lib
 ```
 
 ### `s`
-`s` gives us Type Spec information for a given module or function.
+`s` gives us type spec information for a given module or function.
 This way we can know what it is expecting:
 
 ```elixir
