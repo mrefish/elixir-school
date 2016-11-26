@@ -72,7 +72,7 @@ And we see our message printed and know we have that available.
 
 ### `h`
 `h` is one of the most useful tools our Elixir shell gives us.
-Due to the languages fantastic first class support for documentation, the docs for any code can be reached using this helper.
+Due to the language's fantastic first class support for documentation, the docs for any code can be reached using this helper.
 To see it in action is simple:
 
 ```elixir
